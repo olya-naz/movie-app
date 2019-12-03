@@ -1,0 +1,19 @@
+@import '../../assets/styles/var';
+
+.vote {
+  background-color: $red-color;
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  z-index: 2;
+  i {
+    font-size: 12px;
+    margin-right: 3px;
+  }
+  &.middle {
+    background-color: $orange-color;
+  }
+  &.hight {
+    background-color: $green-color;
+  }
+}

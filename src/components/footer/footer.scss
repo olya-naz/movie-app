@@ -1,0 +1,21 @@
+@import '../../assets/styles/_var';
+
+footer {
+  background-color: $blue-color;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    font-size: 0;
+    display: block;
+  }
+  img {
+    width: 110px;
+  }
+}

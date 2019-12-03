@@ -1,0 +1,118 @@
+@import '_var';
+@import '_reset';
+@import '../font/icon-font/css/icon-font';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  outline: none;
+}
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  color: #323232;
+  height: 100%;
+  @include xs {
+    font-size: 14px;
+  }
+}
+main {
+  flex: 1;
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 200px;
+  margin: 0 auto;
+  @include lg {
+    padding: 0 60px;
+  }
+  @include sm {
+    padding: 0 30px;
+  }
+  @include xs {
+    padding: 0 15px;
+  }
+}
+.hidden-sm {
+  @include sm_xs {
+    display: none!important;
+  }
+}
+.hidden-xs {
+  @include xs {
+    display: none!important;
+  }
+}
+
+.button-link {
+  display: inline-block;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  position: relative;
+  >* {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    color: #fff;
+    background-color: $light_blue-color;
+    width: 100%;
+    height: 100%;
+    padding: 0 25px;
+    position: relative;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  &:hover {
+    >* {
+      background-color: $blue-color;
+    }
+  }
+}
+
+.action-links {
+  button {
+    cursor: pointer;
+    margin-left: 20px;
+    &:hover {
+      i {
+        color: $light_blue-color;
+      }
+    }
+  }
+  i {
+    font-size: 20px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../assets/styles/var';
+
+.pagination {
+  margin-top: -20px;
+  padding-bottom: 50px;
+  .container {
+    height: 45px;
+  }
+  a {
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #b8c9e0;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    color: $light_blue-color;
+    margin-left: 3px;
+    position: relative;
+    &:hover {
+      background-color: $light_blue-color;
+      border-color: $light_blue-color;
+      color: #fff;
+    }
+    i {
+      font-size: 14px;
+      width: 40px;
+      line-height: 43px;
+      position: absolute;
+      top: 0;
+    }
+    &.prev-btn {
+      padding: 0 15px 0 55px;
+      i {
+        left: 0;
+        border-right: 1px solid #b8c9e0;
+      }
+    }
+    &.next-btn {
+      padding: 0 55px 0 15px;
+      float: right;
+      i {
+        right: 0;
+        border-left: 1px solid #b8c9e0;
+      }
+    }
+  }
+  @include xs {
+    padding-bottom: 30px;
+  }
+}

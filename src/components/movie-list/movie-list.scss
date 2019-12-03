@@ -1,0 +1,50 @@
+@import '../../assets/styles/_var';
+
+.movie-list {
+  padding-bottom: 50px;
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: $blue-color;
+    padding: 60px 0 20px;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+    span {
+      display: inline-block;
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+  @include sm {
+    h2 {
+      font-size: 28px;
+      line-height: 32px;
+      padding: 40px 0 20px;
+    }
+  }
+  @include xs {
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+      padding: 30px 0 15px;
+    }
+  }
+}
+.movie-list-wr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 -15px;
+  @include md {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 -7px;
+  }
+  @include sm {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include xs {
+    grid-template-columns: 1fr 1fr;
+  }
+}

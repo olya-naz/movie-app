@@ -1,0 +1,59 @@
+@import '../../assets/styles/_var';
+
+.movie-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  figcaption {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    padding: 5px 0 10px;
+  }
+  figure {
+    img {
+      width: 100%;
+      height: 22.5rem;
+      object-fit: cover;
+    }
+  }
+  .vote {
+    right: 25px;
+    top: 25px;
+    padding: 1px 6px;
+  }
+  .action-links {
+    position: absolute;
+    right: 22px;
+    top: 18px;
+    z-index: 2;
+  }
+  &:hover {
+    -webkit-box-shadow: -8px 8.9px 27px 0 rgba(36, 36, 36, 0.26);
+    -moz-box-shadow: -8px 8.9px 27px 0 rgba(36, 36, 36, 0.26);
+    box-shadow: -8px 8.9px 27px 0 rgba(36, 36, 36, 0.26);
+  }
+  @include md {
+    padding: 7px 7px 15px;
+    .vote {
+      top: 15px;
+      right: 15px;
+    }
+  }
+  @include xs {
+    padding: 7px;
+    figcaption {
+      font-size: 14px;
+      padding: 5px 0 10px;
+    }
+    figure {
+      img {
+        height: 15.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+$blue-color: #041e50;
+$light_blue-color: #234B92;
+$red-color: #ed1c24;
+$grey-color: #a5a5a5;
+$green-color: #38a91e;
+$orange-color: #ff7200;
+
+$cursive-font: 'Alex Brush', cursive;
+
+@mixin xs_portrait {
+  @media (max-width: 767px) and (orientation: portrait) { @content; }
+}
+@mixin xs {
+  @media (max-width: 767px) { @content; }
+}
+@mixin sm_xs {
+  @media (max-width: 991px) and (min-width: 768px) { @content; }
+}
+@mixin sm {
+  @media (max-width: 991px) { @content; }
+}
+@mixin md_xs {
+  @media (max-width: 1279px) and (min-width: 768px) { @content; }
+}
+@mixin md {
+  @media (max-width: 1279px) { @content; }
+}
+@mixin lg {
+  @media (max-width: 1440px) { @content; }
+}
+
+@mixin linear-gradient($direction, $fromColor, $toColor) {
+  background-image: -webkit-linear-gradient(to $direction, $fromColor, $toColor);
+  background-image: -moz-linear-gradient(to $direction, $fromColor, $toColor);
+  background-image: -ms-linear-gradient(to $direction, $fromColor, $toColor);
+  background-image: -o-linear-gradient(to $direction, $fromColor, $toColor);
+  background-image: linear-gradient(to $direction, $fromColor, $toColor);
+}

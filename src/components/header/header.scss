@@ -1,0 +1,70 @@
+@import '../../assets/styles/_var';
+
+header {
+  background-color: #041e50;
+  padding: 12px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  img {
+    width: 50px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 10px;
+  }
+  span {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 18px;
+    font-family: $cursive-font;
+    line-height: 1;
+    color: #fff;
+  }
+  .search-wr {
+    width: 400px;
+  }
+  .search-form {
+    position: relative;
+  }
+  .search-text {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background-color: #fff;
+    padding: 0 55px 0 15px;
+  }
+  .search-button {
+    font-size: 20px;
+    color: $grey-color;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    &:hover {
+      color: $blue-color;
+    }
+  }
+  @include xs {
+    padding: 10px 0 7px;
+    .logo-wr {
+      width: 70px;
+      span {
+        font-size: 20px;
+        margin-top: 8px;
+        display: block;
+      }
+    }
+    .search-wr {
+      padding: 0 0 0 30px;
+      width: calc(100% - 70px);
+    }
+  }
+}
