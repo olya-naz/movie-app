@@ -8,6 +8,7 @@ class Header extends Component {
     state = {
         searchValue: ''
     };
+    inputRef = React.createRef();
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -23,6 +24,7 @@ class Header extends Component {
         });
 
         this.props.history.push(`/search/${searchValue}`);
+        this.inputRef.current.blur();
     };
 
     handleInputChange = (e) => {
@@ -49,6 +51,7 @@ class Header extends Component {
                                    value={ searchValue }
                                    placeholder="Type to search..."
                                    className="search-text"
+                                   ref={ this.inputRef }
                                    onChange={ this.handleInputChange } />
                             <button type="submit"
                                     className="search-button">

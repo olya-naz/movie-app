@@ -13,7 +13,7 @@ import defaultImg from '../../assets/img/default-poster.jpg';
 
 export default class MovieDetails extends Component {
     static propTypes = {
-        id: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
     };
 
     _apiCall = new ApiTmdb();
