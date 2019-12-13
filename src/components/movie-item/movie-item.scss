@@ -19,6 +19,9 @@
       width: 100%;
       height: 22.5rem;
       object-fit: cover;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
     }
   }
   .vote {

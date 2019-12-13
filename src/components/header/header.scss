@@ -22,8 +22,13 @@ header {
     line-height: 1;
     color: #fff;
   }
+  .right-wr {
+
+  }
   .search-wr {
     width: 400px;
+    display: inline-block;
+    vertical-align: middle;
   }
   .search-form {
     position: relative;
@@ -36,6 +41,9 @@ header {
     color: #333;
     background-color: #fff;
     padding: 0 55px 0 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
   }
   .search-button {
     font-size: 20px;
@@ -52,19 +60,46 @@ header {
       color: $blue-color;
     }
   }
-  @include xs {
-    padding: 10px 0 7px;
-    .logo-wr {
-      width: 70px;
-      span {
-        font-size: 20px;
-        margin-top: 8px;
-        display: block;
+  .git-link {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 44px;
+    height: 44px;
+    line-height: 40px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    a {
+      font-size: 20px;
+      color: #fff;
+      display: block;
+    }
+    &:hover {
+      background-color: #fff;
+      a {
+        color: $blue-color;
       }
     }
+  }
+  @include xs {
+    padding: 10px 0 15px;
+    .container {
+      display: block;
+    }
     .search-wr {
-      padding: 0 0 0 30px;
-      width: calc(100% - 70px);
+      margin-top: 15px;
+      width: 100%;
+    }
+    .git-link {
+      position: absolute;
+      right: 15px;
+      top: 11px;
+      margin: 0;
     }
   }
 }

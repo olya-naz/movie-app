@@ -31,6 +31,8 @@ class Header extends Component {
         this.setState({
             searchValue: e.target.value
         });
+
+        console.log(this.inputRef)
     };
 
     render() {
@@ -44,20 +46,28 @@ class Header extends Component {
                             <span>MovieApp</span>
                         </Link>
                     </div>
-                    <div className="search-wr">
-                        <form className="search-form"
-                              onSubmit={ this.handleSubmit }>
-                            <input type="text"
-                                   value={ searchValue }
-                                   placeholder="Type to search..."
-                                   className="search-text"
-                                   ref={ this.inputRef }
-                                   onChange={ this.handleInputChange } />
-                            <button type="submit"
-                                    className="search-button">
-                                <i className="icon-search" />
-                            </button>
-                        </form>
+                    <div className="right-wr">
+                        <div className="search-wr">
+                            <form className="search-form"
+                                  onSubmit={ this.handleSubmit }>
+                                <input type="text"
+                                       value={ searchValue }
+                                       placeholder="Type to search..."
+                                       className="search-text"
+                                       ref={ this.inputRef }
+                                       onChange={ this.handleInputChange } />
+                                <button type="submit"
+                                        className="search-button">
+                                    <i className="icon-search" />
+                                </button>
+                            </form>
+                        </div>
+                        <div className="git-link">
+                            <a href="https://github.com/olya-naz/movie-app"
+                               target="_blank">
+                                <i className="icon-git-brands" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>

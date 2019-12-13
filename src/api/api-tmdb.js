@@ -1,5 +1,5 @@
 export default class ApiTmdb {
-    _API_KEY = '?api_key=#';
+    _API_KEY = '?api_key=fcf247972b8f4e5c42eeb5aa3a0cfdd9';
     _API_BASE = `https://api.themoviedb.org/3/`;
 
     async getResource(url) {
