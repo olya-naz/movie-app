@@ -1,6 +1,8 @@
 # Movie App
 [Demo](https://olya-naz.github.io/movie-app)
 
+Fetch API was used to get an information about movie, list of popular or recommended movies, and to search for movies by query. React Router was used to navigate between pages without reloading.
+
 ## Built With
   * React JS
   * React Router
